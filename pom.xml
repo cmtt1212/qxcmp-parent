@@ -4,7 +4,7 @@
 
     <groupId>com.qxcmp</groupId>
     <artifactId>qxcmp-parent</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE-SNAPSHOT</version>
     <name>QingXing Content Management Platform Parent POM</name>
 
     <packaging>pom</packaging>
