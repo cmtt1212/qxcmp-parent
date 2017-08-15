@@ -21,6 +21,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
+        <github.username>AaricChen</github.username>
+        <github.mvn.repo>mvn-repo</github.mvn.repo>
         <github.global.server>github</github.global.server>
 
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
@@ -420,19 +422,17 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.11</version>
                 <configuration>
-                    <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-                    <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-                    <outputDirectory>${project.build.directory}/mvn-repo
-                    </outputDirectory> <!-- matches distribution management repository url above -->
-                    <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+                    <message>Maven artifacts for ${project.artifactId}-${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/${github.mvn.repo}</outputDirectory>
+                    <branch>refs/heads/${github.mvn.repo}</branch>
                     <includes>
                         <include>**/*</include>
                     </includes>
-                    <repositoryName>qxcmp-parent</repositoryName>      <!-- github repo name -->
-                    <repositoryOwner>aaricchen</repositoryOwner>    <!-- github username  -->
+                    <repositoryName>${project.artifactId}</repositoryName>
+                    <repositoryOwner>${github.username}</repositoryOwner>
                 </configuration>
                 <executions>
-                    <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
                     <execution>
                         <goals>
                             <goal>site</goal>
