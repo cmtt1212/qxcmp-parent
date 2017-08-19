@@ -5,7 +5,7 @@
 
     <groupId>com.github.aaricchen</groupId>
     <artifactId>qxcmp-parent</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE-SNAPSHOT</version>
     <name>QingXing Content Management Platform Parent POM</name>
     <description>QingXing Content Management Platform Parent POM</description>
     <url>https://github.com/AaricChen/qxcmp-parent</url>
