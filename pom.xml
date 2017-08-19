@@ -5,7 +5,7 @@
 
     <groupId>com.github.aaricchen</groupId>
     <artifactId>qxcmp-parent</artifactId>
-    <version>1.0.1.RELEASE-SNAPSHOT</version>
+    <version>1.0.1.RELEASE</version>
     <name>QingXing Content Management Platform Parent POM</name>
     <description>QingXing Content Management Platform Parent POM</description>
     <url>https://github.com/AaricChen/qxcmp-parent</url>
@@ -407,6 +407,16 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20</version>
+                <configuration>
+                    <argLine>-Dfile.encoding=UTF-8 -Duser.language=zh -Duser.region=cn</argLine>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -425,20 +435,6 @@
                                 <phase>package</phase>
                                 <goals>
                                     <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.9.1</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
                                 </goals>
                             </execution>
                         </executions>
